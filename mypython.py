@@ -18,9 +18,9 @@ def main():
 
 def open_write_print_contents(filename, contents):
 	file1 = create_file(filename)
-	file1.write(contents)
+	file1.write('{}\n'.format(contents))
 	file1.seek(0)
-	print(file1.read())
+	print(file1.read(), end='')
 	file1.close()
 
 def create_file(filename):
